@@ -45,6 +45,12 @@ public class UserResource {
 		// Essa variável serve como configuração de retorno com o código de resposta 201
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
 		return ResponseEntity.created(uri).build();
-		
 	}
+	
+	@RequestMapping(value="{id}", method=RequestMethod.DELETE)
+	public ResponseEntity<Void> deleteById(@PathVariable String id){
+		userServ.delete(id);
+		return ResponseEntity.noContent().build();
+	}
+	
 }
