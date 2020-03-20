@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.TimeZone;
 
 import com.leorfk.workshopmongo.domain.Post;
+import com.leorfk.workshopmongo.dto.AuthorDTO;
 import com.leorfk.workshopmongo.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -36,10 +37,22 @@ public class Instantiation implements CommandLineRunner {
 		User jose = new User(null, "José da Silva", "jose@toma.com");
 		User bob = new User(null, "Bob de Maria José", "bob@marley.com");
 
-		Post post1 = new Post(null, sdf.parse("21/03/2018"), "É hora de viajar", "Bora pra São Paulo", maria);
-		Post post2 = new Post(null, sdf.parse("27/03/2018"), "É hora de fazer home", "Bora pra casa", maria);
-
 		userRepository.saveAll(Arrays.asList(maria, jose, bob));
+
+		Post post1 = new Post(
+				null,
+				sdf.parse("21/03/2018"),
+				"É hora de viajar",
+				"Bora pra São Paulo",
+				new AuthorDTO(maria));
+
+		Post post2 = new Post(
+				null,
+				sdf.parse("27/03/2018"),
+				"É hora de fazer home",
+				"Bora pra casa",
+				new AuthorDTO(maria));
+
 		postRepository.saveAll(Arrays.asList(post1, post2));
 	}
 }
