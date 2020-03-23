@@ -22,4 +22,8 @@ public class PostService {
 		// retorna um objeto ou lança uma exception
 		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
 	}
+
+	public List<Post> findByTitle(String text){
+		return postRepo.findByTitleContainingIgnoreCase(text);
+	}
 }
