@@ -6,6 +6,7 @@ import java.util.TimeZone;
 
 import com.leorfk.workshopmongo.domain.Post;
 import com.leorfk.workshopmongo.dto.AuthorDTO;
+import com.leorfk.workshopmongo.dto.CommentDTO;
 import com.leorfk.workshopmongo.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -52,6 +53,13 @@ public class Instantiation implements CommandLineRunner {
 				"É hora de fazer home",
 				"Bora pra casa",
 				new AuthorDTO(maria));
+
+		CommentDTO c1 = new CommentDTO("Boa!", sdf.parse("28/03/2018"), new AuthorDTO(jose) );
+		CommentDTO c2 = new CommentDTO("Valeu!", sdf.parse("28/03/2018"), new AuthorDTO(bob) );
+		CommentDTO c3 = new CommentDTO("De buenas!", sdf.parse("28/03/2018"), new AuthorDTO(jose) );
+
+		post1.getComments().addAll(Arrays.asList(c1, c2));
+		post2.getComments().add(c3);
 
 		postRepository.saveAll(Arrays.asList(post1, post2));
 
