@@ -33,7 +33,7 @@ public class Instantiation implements CommandLineRunner {
 		//limpa a coleção no MongoDB
 		userRepository.deleteAll();
 		postRepository.deleteAll();
-		
+
 		User maria = new User(null, "Maria da Silva", "maria@receba.com");
 		User jose = new User(null, "José da Silva", "jose@toma.com");
 		User bob = new User(null, "Bob de Maria José", "bob@marley.com");
