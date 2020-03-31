@@ -1,4 +1,4 @@
-package com.leorfk.workshopmongo.services;
+package com.leorfk.workshopmongo.service;
 
 import com.leorfk.workshopmongo.domain.Client;
 import com.leorfk.workshopmongo.repository.ClientRepository;

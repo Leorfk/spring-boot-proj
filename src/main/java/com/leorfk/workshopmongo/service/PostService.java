@@ -1,10 +1,8 @@
-package com.leorfk.workshopmongo.services;
+package com.leorfk.workshopmongo.service;
 
 import com.leorfk.workshopmongo.domain.Post;
-import com.leorfk.workshopmongo.dto.UserDTO;
 import com.leorfk.workshopmongo.repository.PostRepository;
-import com.leorfk.workshopmongo.repository.UserRepository;
-import com.leorfk.workshopmongo.services.exception.ObjectNotFoundException;
+import com.leorfk.workshopmongo.service.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.leorfk.workshopmongo.services.exception;
+package com.leorfk.workshopmongo.service.exception;
 
 public class ObjectNotFoundException extends RuntimeException {
 

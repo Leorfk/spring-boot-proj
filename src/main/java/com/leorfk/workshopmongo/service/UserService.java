@@ -1,4 +1,4 @@
-package com.leorfk.workshopmongo.services;
+package com.leorfk.workshopmongo.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.leorfk.workshopmongo.domain.User;
 import com.leorfk.workshopmongo.dto.UserDTO;
 import com.leorfk.workshopmongo.repository.UserRepository;
-import com.leorfk.workshopmongo.services.exception.ObjectNotFoundException;
+import com.leorfk.workshopmongo.service.exception.ObjectNotFoundException;
 
 @Service
 public class UserService {

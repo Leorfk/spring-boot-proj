@@ -1,20 +1,14 @@
 package com.leorfk.workshopmongo.resource;
 
 import com.leorfk.workshopmongo.domain.Post;
-import com.leorfk.workshopmongo.domain.User;
-import com.leorfk.workshopmongo.dto.UserDTO;
 import com.leorfk.workshopmongo.resource.util.URL;
-import com.leorfk.workshopmongo.services.PostService;
-import com.leorfk.workshopmongo.services.UserService;
+import com.leorfk.workshopmongo.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import java.net.URI;
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value="/posts")
